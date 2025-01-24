@@ -31,3 +31,15 @@
    - user.name
    - user.email
    - init.defaultBranch
+
+### Creating Repo and Copying to Github
+ - Git init to initialise the repo
+ - Git add to add files to staging process
+ - Git commit -m "message" to commit to git
+ - Git push origin master to copy local repo to remote
+ - Ensure not to upload secure information to GitHub repo
+ - git ls-files show information about files
+
+### Copying from GitHub to local
+ - git clone *URL* to copy repository to local system
+ - git pull to get newer version of code from remote repo
