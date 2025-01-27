@@ -3,6 +3,8 @@ print("\nQ1a\n")
 x = [2, 5, 4, 87, 34, 2, 1, 31, 103, 99]
 
 # A1a:
+for i in range(5):
+    print(x[i])
 
 
 
@@ -11,7 +13,9 @@ print("\nQ1b\n")
 x = [2, 5, 4, 87, 34, 2, 1, 31, 103, 99]
 
 # A1b:
-
+for i in x:
+    if i%2 == 0:
+        print(i)
 
 
 print("\nQ1c\n")
@@ -19,7 +23,9 @@ print("\nQ1c\n")
 x = [2, 5, 4, 87, 34, 2, 1, 31, 103, 99]
 
 # A1c:
-
+for i in range(5):
+    if x[i]%2 == 0:
+        print(x[i])
 
 # -------------------------------------------------------------------------------------- #
 
@@ -29,9 +35,11 @@ print("\nQ2a\n")
 names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley", "Terence Tao"]
 
 # A2a:
+letter_list = []
+for i in names:
+    letter_list.append(i[0])
 
-
-
+print(letter_list)
 
 print("\nQ2b\n")
 # Q2b: from the list of names, create another list that consists of only the index of the space in the string
@@ -39,7 +47,11 @@ print("\nQ2b\n")
 names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley", "Terence Tao"]
 
 # A2b:
+space_index = []
+for i in names:
+    space_index.append(i.index(" "))
 
+print(space_index)
 
 
 
@@ -48,8 +60,12 @@ print("\nQ2c\n")
 names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley", "Terence Tao"]
 
 # A2c:
+result_list = []
+for i in names:
+    input_index = i.index(" ") + 2
+    result_list.append(i[0:input_index])
 
-
+print(result_list)
 # -------------------------------------------------------------------------------------- #
 
 print("\nQ3a\n")
@@ -63,6 +79,13 @@ list_of_lists = [[1,5,7,3,44,4,1],
 
 # A3a:
 
+list_of_lists_refined = []
+for i in list_of_lists:
+    if len(set(i)) == len(i):
+        list_of_lists_refined.append(i)
+
+print(list_of_lists_refined)
+
 
 # -------------------------------------------------------------------------------------- #
 
@@ -72,8 +95,23 @@ print("\nQ4a\n")
 # they entered
 
 # A4a:
-
-
+valid_input = False
+prime_check = False
+while not valid_input:
+    int_input = int(input("Enter a number greater than 100: "))
+    if int_input > 100:
+        valid_input = True
+        print("Your number is: " + str(int_input) )
+        # Answer for 4b starts here
+        for i in range (2, int_input):
+            if int_input % i == 0:
+                prime_check = True
+        if int_input <= 1:
+            print("Your number is not prime")
+        elif int_input > 1 and prime_check:
+            print("Your number is not prime")
+        elif int_input > 1 and not prime_check:
+            print("Your number is prime")
 print("\nQ4b\n")
 # Q4b: Continue this code and print "prime" if the number is a prime number and "not prime" otherwise
 
