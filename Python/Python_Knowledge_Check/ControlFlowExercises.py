@@ -60,12 +60,12 @@ print("\nQ2c\n")
 names = ["Alan Turing", "Leonardo Fibonacci", "Katherine Johnson", "Annie Easley", "Terence Tao"]
 
 # A2c:
-result_list = []
+initials_list = []
 for i in names:
-    input_index = i.index(" ") + 2
-    result_list.append(i[0:input_index])
+    input_index = i.index(" ") + 1
+    initials_list.append(i[0] + i[input_index])
 
-print(result_list)
+print(initials_list)
 # -------------------------------------------------------------------------------------- #
 
 print("\nQ3a\n")
