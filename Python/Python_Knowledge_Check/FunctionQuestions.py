@@ -1,4 +1,4 @@
-from curses.ascii import isalnum, isdigit
+
 
 print("\nQ1a\n")
 # Q1a: Write a function which takes in an integer as an argument and returns the divisors of that number as a list
