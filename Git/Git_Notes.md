@@ -26,23 +26,52 @@
  - A directory/folder controlled by Git is called a repository
 
 ### Installing Git
- - Download Git and install it
- - Set up config parameters:
-   - user.name
-   - user.email
-   - init.defaultBranch
+ - Download Git using the following link: https://git-scm.com/downloads
+ - Git can be installed on Windows, Mac and Linux systems.
+ - Once installed change current directory to the directory you want 
+to use as your Git repository and use the lines of code below to set 
+up and initialise git repository:
 
-### Creating Repo and Copying to GitHub
- - Git init to initialise the repo
- - Git add to add files to staging process
- - Git commit -m "message" to commit to git
- - Git push origin master to copy local repo to remote
+``` 
+   git config --global user.name
+   git config --global user.email
+   git init
+``` 
+### Commiting changes
+ - Once changes have been made to the Git repository, these changes
+needs to nbe commited.
+ - Adding changes to Git repository consists of three stages <br>
+
+![Image showing three stages of commiting files to Git](https://git-scm.com/book/id/v2/images/lifecycle.png)
+ 
+ - Following lines of code can be used to commit changes after the changes are made:
+```
+git add file_name or git add --all (for multiple files)
+git commit -m "commit message"
+```
+ - Commit message must be brief and precise
+ - Following code can be used to check commit stage of files:
+```
+git status
+```
+
+### Copying to GitHub
+ - GitHub is a web platform to store, manage and share files
+ - It uses Git to provide version control
+ - Repositories can be created on GitHub and copied to local system using following code
+```
+git clone [url-for-repo]
+```
+ - Local repository can be pushed to Github using following code:
+```
+git push origin main
+```
+ - Following code can be used to copy newer version of files from GitHub repo to local repo
+```
+git pull
+```
  - Ensure not to upload secure information to GitHub repo
- - git ls-files show information about files
 
-### Copying from GitHub to local
- - git clone *URL* to copy repository to local system
- - git pull to get newer version of code from remote repo
 
 ## Collaborative Git
 ### Adding collaborators on GitHub
@@ -55,9 +84,15 @@
 ### Why do we need branches
  - To ensure there is fully working version of code without conflicts.
 ### Working with branches
- - git branch *branch_name* : Can be used to create a branch.
- - git checkout *branch_name* : Can be used to switch between branches.
- - git merge *branch_name* :  Can be used to merge specified branch to current branch.
+ - Following lines of code can be used to:
+   - Create a new branch
+   - Switch to the new branch
+   - Merge branch to main branch once changes have been made
+```
+ git branch branch_name
+ git checkout branch_name
+ git merge branch_name
+```
 ### Git Workflow
 #### Git Authority (Auth)
 Responsible for:
