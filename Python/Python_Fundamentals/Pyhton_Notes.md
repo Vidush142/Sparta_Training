@@ -52,12 +52,12 @@ comment
 ```
  - Priority of operators <br>
 
-| Priority (1:highest, 4:lowest) | Operator |
-| ------------------------------- | ---------- |
-| 1                              | +, - (unary) |
-| 2                              | **
-| 3                              |*, /, %
-| 4                              |+, - (binary)
+| Priority (1:highest, 4:lowest)   | Operator |
+|----------------------------------| ---------- |
+| 1                                | +, - (unary) |
+| 2                                | **|
+| 3                                |*, /, %|
+| 4                                |+, - (binary)|
 
  - The binding of the operator determines the order of computations performed by some operators with equal priority, put side by side in one expression
  - Most of python’s operators have left-sided binding
@@ -103,31 +103,27 @@ print(value_1 + value_2)
 ```
 ### String Methods
  - Below is a list of string methods:
-```py
-list() #creates list of all characters in string
-max() #finds the character with maximal codepoint
-min() #finds the character with minimal codepoint
-index() #finds index of given substring inside the string
-captalize() #changes all string to upper case
-center()# centers the string inside the field of a known string
-        #    x = banana
-        #    y = x.center(10, “O”)
-        #    print(y)
-        #output: OObananaOO
-count() #counts the occurrence of given character
-join() #joins all items of tuple/list into a string
-lower() #converts all letters to lower case
-lstrip() #removes white characters(or specified characters) from beginning of string
-replace() #replaces a given substring with another
-rfind() #finds a substring starting from end of string
-        #finds last occurrence of specified substring
-        #returns -1 if not found
-split() #splits string into substring using given separator/delimiter.
-strip() #removes leading and trailing whitespace or specified character
-swapcase() #swaps the letters’ cases
-title() #makes first letter in each word upper case
-upper() #converts all string’s letters to upper case
-```
+ - 
+| Function     | What it does                                                        |
+|--------------|---------------------------------------------------------------------|
+| list()       | creates list of all characters in string                            |
+| max()        | finds the character with maximal codepoint                          |
+| min()        | finds the character with minimal codepoint                          |
+| index()      | finds index of given substring inside the string                    |
+| captalize()  | changes all string to upper case                                    |
+| center()     | centers the string inside the field of a known string               |
+| count()      | counts the occurrence of given character                            |
+| join()       | joins all items of tuple/list into a string                         |
+| lower()      | converts all letters to lower case                                  |
+| lstrip()     | removes white characters(or specified characters) from beginning of string |
+| replace()    | replaces a given substring with another                             |     
+| rfind()      | finds a substring starting from end of string                       |
+| split()      | splits string ino substring using given separator/delimiter         |
+| strip()      | removes leading and trailing whitespace or specified character      |
+| swapcase()   | swaps the letters’ cases                                            |
+| title()      | makes first letter in each word upper case                          |
+| upper()      | converts all string’s letters to upper case                         |
+
 ### Control Flow
  - Python uses if, elif (short for else if), and else keywords to create control flow structures in the program.
 ```py
@@ -137,7 +133,7 @@ def control_flow(x):
     elif x==0:
         print("Equal to Zero")
     else:
-        print("Its Positive)
+        print("Its Positive")
 
 control_flow(-1) # Output = Its Negative
 control_flow(0) # Output = Equal to Zero
