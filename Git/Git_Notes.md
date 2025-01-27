@@ -44,7 +44,8 @@
  - git clone *URL* to copy repository to local system
  - git pull to get newer version of code from remote repo
 
-### Collaborative Git
+## Collaborative Git
+### Adding collaborators on GitHub
  - Go to repo settings and collaborators to add new collaborators
 
 ### Branch Structure
@@ -53,32 +54,36 @@
  - Feature branch is the one where developers should work on.
 ### Why do we need branches
  - To ensure there is fully working version of code without conflicts.
+### Working with branches
+ - git branch *branch_name* : Can be used to create a branch.
+ - git checkout *branch_name* : Can be used to switch between branches.
+ - git merge *branch_name* :  Can be used to merge specified branch to current branch.
 ### Git Workflow
 #### Git Authority (Auth)
 Responsible for:
- - Creating the repo on their own GitHub account
- - Creating a new dev branch
- - Adding branch protection rules to the main and dev branches
- - Requiring reviewers for merging to main or dev
- - Creating the initial folder structure for the project
- - Setting the dev branch as the default
+ - Creating the repo on their own GitHub account.
+ - Creating a new dev branch.
+ - Adding branch protection rules to the main and dev branches.
+ - Requiring reviewers for merging to main or dev.
+ - Creating the initial folder structure for the project.
+ - Setting the dev branch as the default.
 
 #### Team member
 Responsible for:
- - Clone the project locally
- - Create their own feature/developer branches
- - Develop all code on these branches
- - Never code directly on main or dev branch
- - Commit locally at frequent intervals
- - Push updates to GitHub
+ - Clone the project locally.
+ - Create their own feature/developer branches.
+ - Develop all code on these branches.
+ - Never code directly on main or dev branch.
+ - Commit locally at frequent intervals.
+ - Push updates to GitHub.
 
 Overall Workflow:
- - Update feature branch
- - Switch to dev branch
- - Use git pull to sync with remote dev branch
- - Merge conflicts
- - Merge changes to dev
-   - Merge conflicts
+ - Update feature branch.
+ - Switch to dev branch.
+ - Use git pull to sync with remote dev branch.
+ - Resolve merge conflicts.
+ - Merge changes to dev branch:
+   - Resolve merge conflicts
    - Check everything works
    - Commit changes
    - Push feature branch to GitHub
